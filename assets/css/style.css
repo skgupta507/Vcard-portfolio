@@ -1884,5 +1884,43 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: 14px;
     color: #444;
   }
+
+.clients {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.clients-title {
+  margin-left: 0;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: nowrap;          /* Keep logos in one row */
+  gap: 20px;                  /* Space between logos */
+  padding-left: 0;            /* Remove default ul padding */
+  margin-left: 0;             /* Remove default ul margin */
+  list-style: none;           /* Remove bullets */
+  overflow-x: auto;           /* Horizontal scroll if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.clients-item {
+  flex: 0 0 auto;             /* Do not grow or shrink */
+  width: 150px;               /* Fixed width */
+  height: 100px;              /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;        /* Keep aspect ratio */
+  display: block;
+}
+
   
 }
