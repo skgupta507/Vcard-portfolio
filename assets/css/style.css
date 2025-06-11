@@ -2002,5 +2002,142 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 }
 
+/* Blog Section Container */
+.blog {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #121212; /* dark background */
+}
+
+/* Blog header */
+.blog > header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.blog > header .article-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+}
+
+/* Blog posts list */
+.blog-posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each blog post item */
+.blog-post-item {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.5);
+}
+
+/* Blog post link fills entire item */
+.blog-post-item > a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Blog image container */
+.blog-banner-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 3px solid #ff4c60;
+}
+
+.blog-banner-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.blog-post-item:hover .blog-banner-box img {
+  transform: scale(1.05);
+}
+
+/* Blog content */
+.blog-content {
+  padding: 1rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Blog meta info */
+.blog-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 0.6rem;
+}
+
+.blog-meta .blog-category {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ff4c60;
+}
+
+.blog-meta .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 0.8rem;
+}
+
+.blog-meta time {
+  font-style: normal;
+  color: #bbb;
+}
+
+/* Blog title */
+.blog-item-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+/* Blog excerpt text */
+.blog-text {
+  font-size: 1rem;
+  color: #ccc;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .blog-posts-list {
+    grid-template-columns: 1fr;
+  }
+}
+
   
 }
