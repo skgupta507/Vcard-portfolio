@@ -1922,5 +1922,85 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: block;
 }
 
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.project-item {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  position: relative;           /* Needed for absolute positioning inside */
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Center the eye icon */
+.project-item-icon-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 22px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show icon only on hover */
+.project-img:hover .project-item-icon-box {
+  opacity: 1;
+}
+
+.project-title {
+  margin: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.project-category {
+  margin: 0 16px 16px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 1024px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
   
 }
